@@ -1,0 +1,43 @@
+<head>
+	<title>sickbay</title>
+</head>
+
+<body>
+	{{> sickbay}}
+</body>
+
+<template name="sickbay">
+	<div id="patienList">
+		{{#each patients}}
+		<p class="patientName">{{name}}</p>
+		{{/each}}
+	</div>
+	<div id="man"></div>
+	<div id="blob"></div>
+	<div class="patientInfo">
+		<label for="name">
+			Name:
+			<input type="text" class="nameInput" value={{currentPatientInfo "name"}} placeholder="Name" />
+		</label>
+		<label for="symptoms">
+			Symptoms:
+			<input type="text" class="symptomsInput" value={{currentPatientInfo "symptoms"}}  placeholder="Symptoms" />
+		</label>
+		<button type="button" class="btn btn-primary updatePatientInfo">Update</button>
+	</div>
+	<div class="patientInput">
+		<label for="name">
+			Name:
+			<input type="text" class="nameUpdate" placeholder="Name" />
+		</label>
+		<label for="symptoms">
+			Symptoms:
+			<input type="text" class="symptomsUpdate" placeholder="Symptoms" />
+		</label>
+		<button type="button" class="btn btn-primary submitPatientInfo">Submit</button>
+	</div>
+</template>
+
+<template name='patientInput'>
+
+</template>

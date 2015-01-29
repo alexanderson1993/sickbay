@@ -1,0 +1,43 @@
+/* CSS declarations go here */
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	color: #fff;
+}
+
+#man {
+	background-image: url('/man.png');
+	width: 450px;
+	height: 450px;
+	position: absolute;
+	top: 50px;
+	left: 450px;
+}
+#blob{
+	display: none;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	position: absolute;
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,5,9,1)), color-stop(25%,rgba(255,4,8,0.5)), color-stop(60%,rgba(255,1,5,0)), color-stop(100%,rgba(255,0,4,0)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,5,9,1) 0%,rgba(255,4,8,0.5) 25%,rgba(255,1,5,0) 60%,rgba(255,0,4,0) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,5,9,1) 0%,rgba(255,4,8,0.5) 25%,rgba(255,1,5,0) 60%,rgba(255,0,4,0) 100%);
+	-webkit-animation: pulse 2s; /* Chrome, Safari, Opera */
+    animation: pulse 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+/* Standard syntax */
+@keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
